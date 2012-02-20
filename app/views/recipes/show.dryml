@@ -2,11 +2,10 @@
   <heading: replace>
     <gravatar:user/>
     <h2><name/></h2>
-<% debugger -%>
     <p>Posted by <a:user/> (created at <%= @recipe.created_at -%><% if @recipe.updated_at > @recipe.created_at -%>
 	, updated at <%= @recipe.updated_at %><% end -%>).</p>
 
-    <if test="&this.answers">This recipe answers <a:questions/></if>
+    <if test="&this.answers"><p>This recipe answers <a:questions/></p></if>
   </heading:>
   
   <collection-heading:>User contributed notes</collection-heading:>
