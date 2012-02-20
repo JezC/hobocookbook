@@ -14,8 +14,9 @@ in Rakefile.
 As for many rails3 apps:
 
     $ git submodule update --init
-    $ bundle install
     $ vi config/database.yml  # and adjust as required
+    $ vi Gemfile # adjust database gems
+    $ bundle install
     $ bundle exec rake db:migrate
 
 Unique to the cookbook:

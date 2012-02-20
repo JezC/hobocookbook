@@ -7,8 +7,8 @@ gem 'will_paginate', '3.0.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
-gem 'mysql'
+gem 'sqlite3', :group => :development
+gem 'mysql', :group => :production
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -17,15 +17,6 @@ gem 'mysql'
 # gem 'capistrano'
 gem 'yard'
 
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-#gem 'ruby-debug', :group => :development
-#gem 'ruby-debug19', :require => 'ruby-debug', :group => :development
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
@@ -35,7 +26,7 @@ gem 'yard'
 # end
 group :development do
   # set to 0.43 due to problem with .45 see https://github.com/rails/rails/pull/1671
-  # gem 'ruby-debug'
+  gem 'ruby-debug'
   # gem 'ruby-debug-ide'
   # gem 'linecache', '0.43'
 end

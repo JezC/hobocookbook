@@ -2,7 +2,10 @@
   <heading: replace>
     <gravatar:user/>
     <h2><name/></h2>
-    Posted by <a:user/>. 
+<% debugger -%>
+    <p>Posted by <a:user/> (created at <%= @recipe.created_at -%><% if @recipe.updated_at > @recipe.created_at -%>
+	, updated at <%= @recipe.updated_at %><% end -%>).</p>
+
     <if test="&this.answers">This recipe answers <a:questions/></if>
   </heading:>
   
@@ -11,7 +14,7 @@
   <add-form-heading:>Add your own note</add-form-heading:>
   
   <before-form:>
-    <p>The notes are a place for users to contribute to the documention. If you have a question, bug report, feature request or a general
+    <p>The notes are a place for users to contribute to the documentation. If you have a question, bug report, feature request or a general
     comment, please use the <a href="http://groups.google.com/group/hobousers">Hobo Users group</a>.</p>
     
   </before-form:>
